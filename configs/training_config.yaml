@@ -1,0 +1,48 @@
+training:
+    cityscapes:
+        n_epochs: 50
+        optimizer_type: 'Adam'
+        lr_scheduler_type: 'CosineAnnealingLR'
+        optimizer_params:
+            initial_lr: 0.001
+            weight_decay_values: 1e-5
+        scheduler_params:
+            T_max: 5
+            eta_min: 1e-6
+        warmup_epochs: 0
+
+    camvid:
+        n_epochs: 50
+        optimizer_type: 'Adam'
+        lr_scheduler_type: 'CosineAnnealingLR'
+        optimizer_params:
+            initial_lr: 0.001
+            weight_decay_values: 1e-5
+        scheduler_params:
+            T_max: 5
+            eta_min: 1e-6
+        warmup_epochs: 0
+
+    ade:
+        n_epochs: 50
+        optimizer_type: 'Adam'
+        lr_scheduler_type: 'CosineAnnealingLR'
+        optimizer_params:
+            initial_lr: 0.001
+            weight_decay_values: 1e-5
+        scheduler_params:
+            T_max: 5
+            eta_min: 1e-6
+        warmup_epochs: 0
+    
+    pascal:
+        n_epochs: 50
+        optimizer_type: 'Adam'
+        lr_scheduler_type: 'CosineAnnealingLR'
+        optimizer_params:
+            initial_lr: 0.001
+            weight_decay_values: 1e-5
+        scheduler_params:
+            T_max: 5
+            eta_min: 1e-6
+        warmup_epochs: 0

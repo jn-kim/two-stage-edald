@@ -1,0 +1,18 @@
+uncertainty_configs:
+  bald_methods:
+    - bald
+    - power_bald
+    - balentacq
+    - entropy_bald
+  
+  dald_methods:
+    - dald
+    - power_dald
+    - entropy_dald
+  
+  single_forward_methods:
+    - least_confidence
+    - margin_sampling
+    - entropy
+    - random
+

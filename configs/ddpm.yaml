@@ -1,0 +1,61 @@
+ddpm:
+    segmentation_head:
+        type: mlp
+        model_num: 1
+    steps: [50, 150, 250]
+    blocks: [5, 8, 12, 17]
+    share_noise: true
+    input_activations: false
+    decoder_features:
+        '0': [1024, 8, 8]
+        '1': [1024, 8, 8]
+        '2': [1024, 16, 16]
+        '3': [1024, 16, 16]
+        '4': [1024, 16, 16]
+        '5': [1024, 32, 32]
+        '6': [512, 32, 32]
+        '7': [512, 32, 32]
+        '8': [512, 64, 64]
+        '9': [512, 64, 64]
+        '10': [512, 64, 64]
+        '11': [512, 128, 128]
+        '12': [256, 128, 128]
+        '13': [256, 128, 128]
+        '14': [256, 256, 256]
+        '15': [256, 256, 256]
+        '16': [256, 256, 256]
+        '17': [256, 256, 256]
+
+    models:
+        lsun_bedroom:
+            model_path: '${PT_PATH}/lsun_bedroom.pt'
+            model_flags:
+                attention_resolutions: '32, 16, 8'
+                class_cond: False
+                diffusion_steps: 1000
+                dropout: 0.1
+                image_size: 256
+                learn_sigma: True
+                noise_schedule: 'linear'
+                num_channels: 256
+                num_head_channels: 64
+                num_res_blocks: 2
+                resblock_updown: True
+                use_fp16: True
+                use_scale_shift_norm: True
+
+        imagenet_256:
+            model_path: '${PT_PATH}/256x256_diffusion_uncond.pt'
+            model_flags:
+                attention_resolutions: '32, 16, 8'
+                class_cond: False
+                diffusion_steps: 1000
+                image_size: 256
+                learn_sigma: True
+                noise_schedule: 'linear'
+                num_channels: 256
+                num_head_channels: 64
+                num_res_blocks: 2
+                resblock_updown: True
+                use_fp16: True
+                use_scale_shift_norm: True

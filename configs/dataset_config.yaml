@@ -1,0 +1,47 @@
+datasets:
+    cityscapes:
+        dir_dataset: '${DATASET_PATH}/Cityscapes_256/real'
+        ignore_index: 255
+        img_ext: 'png'
+        n_classes: 19
+        img_size: 256
+        mean: [0.28689554, 0.32513303, 0.28389177]
+        std: [0.18696375, 0.19017339, 0.18720214]
+        batch_size: 5
+        downsample: 1
+
+    camvid:
+        dir_dataset: '${DATASET_PATH}/CamVid_256/real'
+        val_mode: 'test'
+        ignore_index: 255
+        img_ext: 'png'
+        n_classes: 11
+        img_size: 256
+        mean: [0.41189489566336, 0.4251328133025, 0.4326707089857]
+        std: [0.27413549931506, 0.28506257482912, 0.28284674400252]
+        batch_size: 5
+        downsample: 1
+
+    ade:
+        dir_dataset: '${DATASET_PATH}/ADE_Bed_256/real'
+        val_mode: 'test'
+        ignore_index: 255
+        img_ext: 'jpg'
+        n_classes: 30
+        img_size: 256
+        mean: [0.54199766, 0.4840552, 0.44137547]
+        std: [0.20373902, 0.21227961, 0.21474767]
+        batch_size: 5
+        downsample: 1
+    
+    pascal:
+        dir_dataset: '${DATASET_PATH}/Pascal_context_256/real'
+        val_mode: 'val'
+        ignore_index: 255
+        img_ext: 'jpg'
+        n_classes: 33
+        img_size: 256
+        mean: [0.45757262, 0.43945149, 0.40722903]
+        std: [0.2665372, 0.26389789, 0.27778689]
+        batch_size: 5
+        downsample: 1
